@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Memory Matching Game</title>
+
+  <link rel="shortcut icon" type="image/jpg" href="Images/fevicon.PNG" />
+  <link rel="stylesheet" href="gameStyle.css" />
+</head>
+<body>
+  <div id="splash">
+    <div class="splash-inner">
+      <h1>Memory Matching Game</h1>
+      <p>Sharpen your mind. Beat your best time.</p>
+      <button id="splash-start">Start Playing</button>
+    </div>
+  </div>
+
+  <div class="app">
+
+    <header class="top-bar">
+      <div class="brand">
+        <span class="logo-accent">UA</span> Memory Match
+      </div>
+
+      <div class="top-right">
+        <button id="theme-toggle" class="icon-btn" aria-label="Toggle theme">
+          🌙
+        </button>
+        <button id="sound-toggle" class="icon-btn" aria-label="Toggle sound">
+          🔊
+        </button>
+      </div>
+    </header>
+
+    <section class="stats-bar">
+      <div class="stat">
+        <span class="label">Moves</span>
+        <span id="moves" class="value">0</span>
+      </div>
+      <div class="stat">
+        <span class="label">Time</span>
+        <span id="time" class="value">00:00</span>
+      </div>
+      <div class="stat">
+        <span class="label">Best Time</span>
+        <span id="best-time" class="value">--:--</span>
+      </div>
+      <div class="stat">
+        <span class="label">Board</span>
+        <span id="board-label" class="value">4 x 4</span>
+      </div>
+    </section>
+
+    <main class="layout">
+      <!-- Left: Controls -->
+      <section class="panel">
+        <h2>Game Settings</h2>
+
+        <label class="field">
+          <span>Board Size</span>
+          <select id="board-size">
+            <option value="4x4">4 x 4 (Easy)</option>
+            <option value="4x5">4 x 5 (Medium)</option>
+            <option value="6x6">6 x 6 (Hard)</option>
+          </select>
+        </label>
+
+        <button id="new-game" class="primary-btn">
+          New Game
+        </button>
+
+        <div class="info-box">
+          <h3>How to Play</h3>
+          <p>Flip two cards at a time and find all matching pairs.</p>
+          <p>Beat your own best time for each board size.</p>
+        </div>
+      </section>
+
+      <section class="board-wrapper">
+        <div id="board" class="board">
+        </div>
+      </section>
+    </main>
+
+    <div id="win-modal" class="modal hidden">
+      <div class="modal-content">
+        <h2>✨ You did it! ✨</h2>
+        <p id="win-summary"></p>
+        <p id="win-best"></p>
+
+        <div class="modal-actions">
+          <button id="play-again" class="primary-btn">
+            Play Again
+          </button>
+          <button id="close-modal" class="secondary-btn">
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="gameScript.js"></script>
+</body>
+</html>
