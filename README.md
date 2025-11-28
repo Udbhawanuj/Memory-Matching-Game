@@ -32,11 +32,6 @@ Memory-Matching-Game
 │── gameScript.js
 └── Images/
 
-Deployment (GitHub Pages)
-1. Push the project to a GitHub repository
-2. Open Settings → Pages
-3. Select the main branch and root folder
-4. GitHub will generate a live URL for the game
 
 Future Improvements
 - Leaderboard
